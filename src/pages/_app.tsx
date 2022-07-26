@@ -65,10 +65,7 @@ const App = (props: ExtendedAppProps) => {
     <CacheProvider value={emotionCache}>
       <Head>
         <title>{`${themeConfig.templateName} - Material Design React Admin Template`}</title>
-        <meta
-          name='description'
-          content={`${themeConfig.templateName} – Material Design React Admin Dashboard Template – is the most developer friendly & highly customizable Admin Dashboard Template based on MUI v5.`}
-        />
+        <meta name='description' content={`${themeConfig.templateName} – Electronic Medical Record`} />
         <meta name='keywords' content='Material Design, MUI, Admin Template, React Admin Template' />
         <meta name='viewport' content='initial-scale=1, width=device-width' />
       </Head>
@@ -86,8 +83,8 @@ const App = (props: ExtendedAppProps) => {
   )
 }
 
-export async function getServerSideProps(ctx:any) {
-  const ses = await getSession(ctx);
+export async function getServerSideProps(ctx: any) {
+  const ses = await getSession(ctx)
   return {
     props: {
       session: ses
